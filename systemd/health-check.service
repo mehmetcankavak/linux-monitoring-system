@@ -1,0 +1,10 @@
+[Unit]
+Description=Sunucu sağlık kontrolü (CPU/RAM/Disk)
+After=network.target
+
+[Service]
+Type=oneshot
+User=devopsuser
+ExecStart=/home/devopsuser/linux-monitoring-system/scripts/health_check.sh -t 85
+
+
