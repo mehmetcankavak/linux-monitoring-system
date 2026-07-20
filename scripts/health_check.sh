@@ -1,3 +1,4 @@
+# Health check script - v1.1
 #!/bin/bash
 set -euo pipefail
 # Varsayılan eşik değeri (disk kullanımı için, yüzde olarak)
