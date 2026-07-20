@@ -4,7 +4,7 @@ Bu proje, bir Linux sunucusunun sağlık durumunu (CPU, RAM, disk) düzenli aral
 
 ## Özellikler
 
-- **Sağlık İzleme:** CPU, RAM ve disk kullanımını ölçer, belirlenen eşiği aşan durumları loglar
+- **Sağlık İzleme:** CPU, RAM, disk ve şimdi log dosyası boyutunu da ölçer, belirlenen eşiği aşan durumları loglar
 - **Otomatik Yedekleme:** Belirlenen dizini `tar.gz` ile sıkıştırıp tarih damgalı şekilde yedekler, 7 günden eski yedekleri otomatik temizler
 - **Otomasyon:** Sağlık kontrolü systemd timer ile her 5 dakikada bir, yedekleme cron ile her gece 02:00'de otomatik çalışır
 - **Güvenlik:** SSH key-based authentication zorunlu (şifreyle giriş kapalı), least privilege prensibiyle sınırlandırılmış sudo yetkileri
