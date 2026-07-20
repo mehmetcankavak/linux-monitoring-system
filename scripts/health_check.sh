@@ -53,3 +53,4 @@ else
     log "Sonuç: Sistem sağlıklı."
     exit 0
 fi
+# health check script - hook test edildi
