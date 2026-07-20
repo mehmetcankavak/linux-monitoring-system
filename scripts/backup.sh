@@ -34,3 +34,11 @@ find "$BACKUP_DIR" -name "backup_*.tar.gz" -mtime "+${RETENTION_DAYS}" -delete
 
 log "${DELETED_COUNT} adet eski yedek silindi."
 
+# Log rotasyonu
+if [ -f "$LOG_FILE" ]; then
+    LOG_SIZE=$(du -m "$LOG_FILE" | cut -f1)
+    if [ "$LOG_SIZE" -gt 50 ]; then
+        mv "$LOG_FILE" "${LOG_FILE}.old"
+        gzip "${LOG_FILE}.old"
+    fi
+fi
